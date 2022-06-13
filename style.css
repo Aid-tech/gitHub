@@ -1,0 +1,205 @@
+:root {
+  --bg-color: #fff;
+  --border-color: hsl(0, 0%, 83%);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border-color);
+  padding: 30px 20px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  margin-bottom: 30px;
+  width: 150px;
+}
+
+.header h3{
+  margin-top: 0;
+}
+
+.search-input {
+  width: 600px;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 18px;
+}
+
+.search-input:focus,
+.search-input:active {
+  border-color: #36c;
+  outline: none;
+}
+
+.search-results {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.result-item {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.result-title {
+  font-size: 22px;
+}
+
+.result-title a {
+  text-decoration: none;
+}
+
+.result-snippet {
+  font-size: 15px;
+  color: #444;
+}
+
+.result-link {
+  color: #006621;
+  text-decoration: none;
+  display: block;
+  overflow-wrap: break-word;
+}
+
+.left {
+  float: left;
+  margin-right: 10px;
+}
+
+.left .text{
+  width: 255px;
+}
+
+.left .text p {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+.left .text p a{
+  text-decoration: none;
+  background: blue;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+
+.left .text p span{
+  background: green;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sk-chase.hidden {
+  display: none;
+}
+
+.sk-chase-dot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+
+.sk-chase-dot:before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: #333;
+  border-radius: 100%;
+  animation: sk-chase-dot-before 2s infinite ease-in-out both;
+}
+
+.dropbtn {
+  background: white;
+  margin-top: 10px;
+  color: green;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  height: 170px;
+  overflow: scroll;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content  */
+.active{
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn, .down {
+  background-color: #3e8e41;
+  color: white;
+}
+
+@media screen and (max-width: 550px) {
+  .search-form {
+    width: 100%;
+  }
+
+  .search-input {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .search-results {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
